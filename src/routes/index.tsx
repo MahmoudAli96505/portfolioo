@@ -12,7 +12,7 @@ type Search = { version?: Version };
 
 export const Route = createFileRoute("/")({
   validateSearch: (s: Record<string, unknown>): Search => {
-    const v = String(s.version ?? "").toLowerCase();
+    const v = String(s["version"] ?? "").toLowerCase();
     return v === "uae" || v === "egypt" ? { version: v } : {};
   },
   loaderDeps: ({ search }) => ({ version: search.version }),

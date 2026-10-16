@@ -11,7 +11,7 @@ function safeEqual(a: string, b: string) {
 }
 
 function checkPass(p: string) {
-  const expected = process.env.ADMIN_PASSCODE || "2026";
+  const expected = process.env['ADMIN_PASSCODE'] || "2026";
   return safeEqual(String(p ?? ""), expected);
 }
 
