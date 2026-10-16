@@ -5,7 +5,7 @@ import {
   MessageCircle, Mail, Download, MapPin, Phone, Copy, Database, FileSpreadsheet,
   Keyboard, Network, BarChart3, GraduationCap, Languages, Briefcase, IdCard,
 } from "lucide-react";
-import { getActiveVersion, type Version } from "@/lib/settings.functions";
+import type { Version } from "@/lib/settings.functions";
 import { PROFILES, EMAIL, EXPERIENCE, SKILLS } from "@/lib/cv-data";
 
 type Search = { version?: Version };
@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
     return v === "uae" || v === "egypt" ? { version: v } : {};
   },
   loaderDeps: ({ search }) => ({ version: search.version }),
-  loader: async ({ deps }) => ({ version: deps.version ?? (await getActiveVersion()) }),
+  loader: ({ deps }) => ({ version: deps.version ?? "uae" }),
   head: () => ({
     meta: [
       { title: "Mahmoud Ali — Data Entry Specialist & MIS Graduate" },

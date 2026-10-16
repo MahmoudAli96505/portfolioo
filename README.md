@@ -36,7 +36,9 @@ Key Requirements:
 
 This project was built with [Lovable](https://lovable.dev).
 
-**Live app**: https://mahmoudali96505.lovable.app
+**Live app**: https://mahmoudali96505.github.io/portfolioo/
+
+The GitHub Pages deployment is static: the UAE profile is the default, and country-specific links use `?version=uae` or `?version=egypt`. The server-backed admin switcher is not available on GitHub Pages.
 
 ## Build with Lovable
 

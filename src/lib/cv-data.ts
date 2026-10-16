@@ -12,7 +12,7 @@ export const PROFILES: Record<
     location: "Ajman - United Arab Emirates",
     phone: "+971 56 541 0751",
     wa: "https://wa.me/971565410751",
-    cv: "/downloads/Mahmoud_Ali_CV_UAE.pdf",
+    cv: `${import.meta.env.BASE_URL}downloads/Mahmoud_Ali_CV_UAE.pdf`,
     extras: [{ k: "UAE Residency", v: "Visa valid until 18-12-2026" }],
   },
   egypt: {
@@ -21,7 +21,7 @@ export const PROFILES: Record<
     location: "Alexandria - Egypt",
     phone: "+20 109 783 1301",
     wa: "https://wa.me/201097831301",
-    cv: "/downloads/Mahmoud_Ali_CV_Egypt.pdf",
+    cv: `${import.meta.env.BASE_URL}downloads/Mahmoud_Ali_CV_Egypt.pdf`,
     extras: [
       { k: "Driving License", v: "Valid" },
       { k: "Military Service", v: "Exempt" },
